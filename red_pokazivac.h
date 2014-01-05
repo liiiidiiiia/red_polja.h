@@ -39,8 +39,7 @@ void EnQueueQ(osoba*pacijent, tred*red) {
 }
 
 void DeQueueQ(tred*red) {
-    osoba*glava=new osoba;
-    glava=red->front;
-    red->front=glava->sljedeci;
-    delete glava;
+        element pom=red->front;
+        red->front=pom->sljedeci;
+        delete pom;
 }

@@ -26,9 +26,10 @@ bool IsEmptyQ(tred*red) {
 }
 
 void EnQueueQ(osoba*pacijent, tred*red) {
-    red->rear->sljedeci=pacijent;
-    pacijent->sljedeci=NULL;
-    red->rear=pacijent;
+        Q->rear->sljedeci=new telement;
+        Q->rear=Q->rear->sljedeci;
+        Q->rear->sljedeci=NULL;
+        Q->rear->pacijent=pacijent;
 }
 
 osoba*FrontQ(tred*red) {

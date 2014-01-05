@@ -18,6 +18,10 @@ struct tred {
     int front,rear;
 };
 
+osoba*FrontQ(tred*red) {
+    return red->pacijent[red->front];
+}
+
 void EnQueueQ (osoba*pacijent, tred *red) {
     if (AddOne(AddOne(red->rear))==(red->front))
         cout<<"Red je pun."<<endl;
@@ -30,11 +34,6 @@ void EnQueueQ (osoba*pacijent, tred *red) {
 int IsEmptyQ(tred*red) {
     if(AddOne(red->rear)==red->front)return 1;
     return 0;
-}
-
-osoba*FrontQ(tred*red) {
-    if(!IsEmptyQ)cout<<"Red je prazan."<<endl;
-    return red->pacijent[red->front];
 }
 
 void DeQueueQ(tred*red) {

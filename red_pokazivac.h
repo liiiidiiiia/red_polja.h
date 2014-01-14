@@ -33,7 +33,7 @@ osoba*FrontQ(tred*red) {
 
 void EnQueueQ(osoba*pacijent, tred*red) {
         red->rear->sljedeci=new telement;
-        red->rear=Q->rear->sljedeci;
+        red->rear=red->rear->sljedeci;
         red->rear->sljedeci=NULL;
         red->rear->pacijent=pacijent;
 }

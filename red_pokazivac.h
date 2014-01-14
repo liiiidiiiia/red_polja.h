@@ -32,10 +32,10 @@ osoba*FrontQ(tred*red) {
 }
 
 void EnQueueQ(osoba*pacijent, tred*red) {
-        Q->rear->sljedeci=new telement;
-        Q->rear=Q->rear->sljedeci;
-        Q->rear->sljedeci=NULL;
-        Q->rear->pacijent=pacijent;
+        red->rear->sljedeci=new telement;
+        red->rear=Q->rear->sljedeci;
+        red->rear->sljedeci=NULL;
+        red->rear->pacijent=pacijent;
 }
 
 void DeQueueQ(tred*red) {
